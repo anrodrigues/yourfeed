@@ -1,6 +1,30 @@
+//colors
 $bg-primary: #fff;
 $bg-secondary: #F6F7F8;
 $primary-text: #000000;
 $primary-color: #007BED;
 $main-border: #efefef;
 
+//spacing
+$s-xxsmall: 0.8rem;
+$s-small: 2.4rem;
+$s-xsmall: 1.6rem;
+$s-medium: 3.2rem;
+$s-large: 4.0rem;
+$s-xlarge: 4.8rem;
+$s-xxlarge: 5.6rem;
+
+//fonts
+$f-family: 'Roboto, Helvetica, sans-serif';
+$f-size-xsmall:1.2rem;
+$f-size-small: 1.4rem;
+$f-size-medium: 1.6rem;
+$f-size-large: 1.8rem;
+$f-size-xlarge: 2.0rem;
+$f-size-xxlarge: 2.8rem;
+
+//breakpoints
+$b-small: 576;
+$b-medium: 768;
+$b-large: 992;
+$b-xlarge: 1200;

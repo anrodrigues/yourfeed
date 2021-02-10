@@ -1,7 +1,7 @@
-@import '../../theme/theme.scss';
+@import '../../theme/global.scss';
 
 .sideBar {
-    width: 250px;
+    width: $sidebar-size;
     background-color: $bg-secondary;
     height: 100%;
     position: fixed;

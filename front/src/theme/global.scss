@@ -1,16 +1,18 @@
 @import 'reset.scss';
 @import 'theme.scss';
 
+$sidebar-size: 300px;
+
 .contentWrapper {
-    margin-left: 250px;
+    margin-left: $sidebar-size;
 }
 
 .wrapperBody {
-    padding: 60px 80px;
+    padding: $s-medium  $s-large;
 }
 
-@media (max-width: 800px) {
+@media (max-width: $b-medium) {
     .wrapperBody {
-        padding: 60px 15px;
+        padding: $s-xlarge $s-medium;
     }
 }
