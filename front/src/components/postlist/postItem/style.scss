@@ -1,0 +1,24 @@
+@import '../../../theme/theme.scss';
+
+.card {
+   width: 25%;
+
+   img {
+      width: 90%;
+   }
+}
+
+@media (max-width: 1260px ) {
+   .card{
+      width: 50%;
+   } 
+}
+
+@media (max-width: 800px ) {
+   .card{
+      width: 100%;
+      img {
+         width: 100%;
+      }
+   } 
+}

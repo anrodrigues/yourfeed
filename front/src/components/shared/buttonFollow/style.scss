@@ -1,0 +1,18 @@
+@import '../../../theme/theme.scss';
+
+.ButtonFollow {
+   font-size: 14px;
+   font-weight: normal;
+   color: #1F8AEE;
+   border: 1px #1F8AEE solid;
+   background-color: transparent;
+   padding: 5px 45px;
+   cursor: pointer;
+   border-radius: 2px;
+
+   &:hover {
+      background-color: #1F8AEE;
+      color: #FFFFFF;
+   }
+}
+

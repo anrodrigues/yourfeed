@@ -1,0 +1,23 @@
+@import '../../theme/theme.scss';
+
+.searchWrapper {
+   width: 100%;
+   position: relative;
+
+   input {
+      height: 60px;
+      font-size: 18px;
+      border: 1px solid $main-border;
+      border-radius: 3px;
+      padding: 10px 10px 10px 70px;
+      width: 100%;
+   }
+
+   img {
+      width: 25px;
+      position: absolute;
+      left: 15px;
+      top: 20px;
+   }
+}
+

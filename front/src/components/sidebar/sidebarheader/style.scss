@@ -1,0 +1,13 @@
+@import '../../../theme/theme.scss';
+
+.sidebarHeader {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    border-bottom: 1px solid $main-border;
+    justify-content: center;
+    
+    img {
+        width: 150px;
+    }
+}

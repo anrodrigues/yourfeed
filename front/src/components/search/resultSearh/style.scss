@@ -1,0 +1,40 @@
+@import '../../../theme/theme.scss';
+
+.ResultItem {
+   width: 100%;
+   border: 1px solid $main-border;
+   margin: 40px 0;
+   padding: 20px;
+   display: flex;
+
+   .ResultLogo {
+      margin-right: 50px;
+   }
+
+   .ResultContent {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      h2 {
+         font-size: 22px;
+         font-weight: bold;
+      }
+
+      a {
+         font-weight: normal;
+         font-size: 14px;
+         margin: 10px 0;
+      }
+
+      p {
+         font-weight: normal;
+         font-size: 17px;
+         color: #848484;
+         margin: 0 0 20px 0;
+      }
+   }
+
+
+}
+

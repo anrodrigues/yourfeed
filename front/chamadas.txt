@@ -1,0 +1,20 @@
+https://api.unsplash.com/search/photos?query=wanderlust 
+
+
+https://api.rss2json.com/v1/api.json?rss_url=
+
+
+https://cloud.feedly.com/v3/search/feeds?query=tech
+
+Buscar um feed
+https://cloud.feedly.com/v3/search/feeds?query=tech
+
+pegar mais vistos
+https://feedly.com/v3/mixes/contents?streamId=feed/http://www.cineclick.com.br/rss/noticia&count=3&hours=12&boostMustRead=true&unreadOnly=true&backfill=true&ck=1600097224568&ct=feedly.desktop&cv=31.0.890
+
+pegar feeds
+https://feedly.com/v3/streams/contents?streamId=feed/http://www.cineclick.com.br/rss/noticia&count=20&unreadOnly=true&ranked=newest&similar=true&findUrlDuplicates=true&ck=1600097224891&ct=feedly.desktop&cv=31.0.890
+
+https://feedly.com/v3/feeds/feed%2Fhttp%3A%2F%2Ffeeds.feedburner.com%2Ftecnoblog
+
+https://feedly.com/v3/mixes/contents?streamId=feed%2Fhttp%3A%2F%2Ffeeds.feedburner.com%2Ftecnoblog&count=10&hours=18&boostMustRead=true
