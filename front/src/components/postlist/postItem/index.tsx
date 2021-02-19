@@ -6,8 +6,6 @@ import CoverDefault from '../../../assets/feed-icon.png';
 
 import './style.scss'
 
-   
-
 export default function PostItem({cover, title, feedId, origin}:Post) {
 
     const [hasError, setHasError] = useState(false)
@@ -19,7 +17,9 @@ export default function PostItem({cover, title, feedId, origin}:Post) {
     return (
         <div className="card">
             <a href={origin} target="_blank">
-                <img onError={(e)=> setError(e)} src={ hasError ? CoverDefault : cover } alt="cover post"/>
+                <div className="postImgWrapper">
+                    <img onError={(e)=> setError(e)} src={ hasError ? CoverDefault : cover } alt="cover post"/>
+                </div>
                 <p>{title}</p>
             </a>
         </div>  

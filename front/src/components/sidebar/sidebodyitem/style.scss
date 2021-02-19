@@ -28,7 +28,7 @@
    }
 
    p {
-      font-size: 12px;
+      font-size: $f-size-xxsmall;
       margin: 0;
    }
 
@@ -39,8 +39,6 @@
 
    .deleteItem {
       display: none;
-   }
-
-   
+   }   
   
  }
