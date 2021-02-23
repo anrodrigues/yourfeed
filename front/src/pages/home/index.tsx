@@ -4,11 +4,6 @@ import SideBar from  '../../components/sidebar/index'
 import TopBar from  '../../components/topbar'
 import HeaderTitle from '../../components/HeaderTitle'
 import PostList from '../../components/postlist'
-import ContentLoader from 'react-content-loader'
-
-import BlogPost from '../../components/contentLoader/BlogPost'
-
-import Post from '../../models/interfaces/post'
 
 import api from '../../api'
 
