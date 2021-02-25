@@ -1,6 +1,10 @@
 @import 'reset.scss';
 @import 'theme.scss';
 
+html {
+    font-size: 62.5%; /* 62.5% of 16px = 10px */   
+}
+
 $sidebar-size: 300px;
 
 .contentWrapper {
@@ -14,5 +18,9 @@ $sidebar-size: 300px;
 @media (max-width: $b-medium) {
     .wrapperBody {
         padding: $s-xlarge $s-medium;
+    }
+
+    .contentWrapper {
+        margin-left: 0;
     }
 }

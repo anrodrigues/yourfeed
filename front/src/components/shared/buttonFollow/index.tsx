@@ -1,8 +1,7 @@
 import { SavedFeedsContext } from 'context/savedFeedsContext';
-import React, {useState, useContext} from 'react'
+import React, { useContext} from 'react'
 
 import './style.scss'
-
 interface Props {
     feedId: string
     logo: string

@@ -1,5 +1,5 @@
 import React, {useEffect, useState, useContext} from 'react'
-
+import TabIcon from '../../shared/tabIcon'
 import './style.scss'
 import Search from '../../../assets/search.svg'
 
@@ -48,6 +48,10 @@ export default function SideBody( {searchAction}: Props) {
                 <Link to="/search">
                     <img src={Search}/>
                 </Link>
+
+                <span className="tabWrapper">
+                <TabIcon/>
+            </span>
                 
             </div>
      
