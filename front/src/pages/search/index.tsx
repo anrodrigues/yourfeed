@@ -28,7 +28,7 @@ export default function Home() {
     return (
         <>
             <div className="contentWrapper">
-                <TopBar/>
+
                 <div className="wrapperBody">
                     <HeaderTitle text="Descubra o melhor conteúdo de qualquer tópico."/>
                     <Searh searchTerm={searchTerm}/>

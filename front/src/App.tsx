@@ -1,75 +1,62 @@
-import React, { useState, useEffect }  from 'react'
-import Home from './pages/home'
-import Search from './pages/search'
-import SideBar from  './components/sidebar/index'
-import api from 'api'
-import { BrowserRouter, Route, Switch, useHistory} from 'react-router-dom'
+import React, { useState, useEffect } from "react";
+import Home from "./pages/home";
+import Search from "./pages/search";
+import SideBar from "./components/sidebar/index";
+import TopBar from "components/topbar";
+import { BrowserRouter, Route, Switch, useHistory } from "react-router-dom";
 
-import { SavedFeedsContext } from './context/savedFeedsContext'
-import { DEFAULT_VALUE } from './context/savedFeedsContext'
+import {
+  SavedFeedsContext,
+  DEFAULT_VALUE_SAVED_FEEDS,
+} from "./context/savedFeedsContext";
 
-import  './theme/global.scss'
-import 'app.scss'
+import {
+  CurrentFeedContext,
+  DEFAULT_VALUE_CURRENT_FEED,
+} from "./context/currentFeedContext";
 
+import "./theme/global.scss";
+import "app.scss";
 
-function App(){
+function App() {
+
+  var savedFeeds = localStorage.getItem("feeds");
+  var trustedFeed ;
+
+  if (savedFeeds !== null) {
+    if (typeof savedFeeds === "string") {
+      trustedFeed = JSON.parse(savedFeeds)
+    }
+  } else {
+    trustedFeed =  DEFAULT_VALUE_SAVED_FEEDS.savedFeed
+  }
+
+  const [savedFeed, setsavedFeed] = useState((trustedFeed));
+  const [currentFeed, setCurrentFeed] = useState(DEFAULT_VALUE_CURRENT_FEED.currentFeed);
 
   useEffect(() => {
-    var currentFeed = localStorage.getItem('feeds');
-   
-
-    if(currentFeed !== null) {
-        if (typeof currentFeed === 'string') {
-            setFeeds(JSON.parse(currentFeed));
-         
-        }
-    } 
- 
-  }, [])
-
-  const [currentFeed, setcurrentFeed] = useState(
-     
-    {
-        blogTitle: '',
-        posts: []
-
+    if (savedFeeds !== null) {
+      if (typeof savedFeeds === "string") {
+        setsavedFeed(JSON.parse(savedFeeds));
+      }
     }
-  ) 
+  }, []);
 
 
-
-
-  const [feeds, setFeeds] = useState(DEFAULT_VALUE.feeds)
-  const history = useHistory();
-  async function searchFeed(feedId:String) {
- 
- 
-    try {
-        const result = await api.post(`/getPosts`, {feedId})
-        console.log(result.data)
-        setcurrentFeed(result.data)
-        history.push('/home')
-  
-    } catch(e) {
-      console.log(e)
-    }
-  
-  }
   return (
     <div className="wrapper">
- 
       <BrowserRouter>
-      <SavedFeedsContext.Provider value={{ feeds , setFeeds }}>
-      <SideBar searchAction={searchFeed} />
-        <Switch>
-   
-          <Route path={'/'} exact={true} component={Home}/>
-          <Route path={'/search'} exact={true} component={Search}/>
- 
-        </Switch>
+        <SavedFeedsContext.Provider value={{ savedFeed, setsavedFeed }}>
+          <CurrentFeedContext.Provider value={{ currentFeed, setCurrentFeed }}>
+            <SideBar/>
+            <TopBar />
+            <Switch>
+              <Route path={"/"} exact={true} component={Home} />
+              <Route path={"/search"} exact={true} component={Search} />
+            </Switch>
+          </CurrentFeedContext.Provider>
         </SavedFeedsContext.Provider>
       </BrowserRouter>
-
     </div>
   );
 }
