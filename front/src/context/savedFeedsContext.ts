@@ -9,19 +9,19 @@ interface feedSimple {
 type feed = Array<feedSimple>
    
 type SavedFeedsContext = {
-    feeds: feed,
-    setFeeds: React.Dispatch<React.SetStateAction<feed>>
+    savedFeed: feed,
+    setsavedFeed: React.Dispatch<React.SetStateAction<feed>>
 }
 
-export const DEFAULT_VALUE = {
-    feeds: [
+export const DEFAULT_VALUE_SAVED_FEEDS = {
+    savedFeed: [
         {
             logo: "",
             title: "",
             feedId: ""
         }
     ],
-    setFeeds: () => {}
+    setsavedFeed: () => {}
 }
 
-export const SavedFeedsContext = createContext<SavedFeedsContext>(DEFAULT_VALUE);
+export const SavedFeedsContext = createContext<SavedFeedsContext>(DEFAULT_VALUE_SAVED_FEEDS);

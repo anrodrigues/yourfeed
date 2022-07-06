@@ -1,8 +1,7 @@
+import React, { useContext} from 'react'
 import { SavedFeedsContext } from 'context/savedFeedsContext';
-import React, {useState, useContext} from 'react'
 
 import './style.scss'
-
 interface Props {
     feedId: string
     logo: string
@@ -10,7 +9,7 @@ interface Props {
 }
 
 export default function ButtonFollow({feedId, logo, title}:Props) {
-    const {feeds, setFeeds} = useContext(SavedFeedsContext)
+    const {savedFeed, setsavedFeed} = useContext(SavedFeedsContext)
 
     function followFeed(feedId:string, logo:string, title:string) {
         let feedToAdd = {
@@ -32,8 +31,7 @@ export default function ButtonFollow({feedId, logo, title}:Props) {
 
         localStorage.setItem("feeds", JSON.stringify(FeedToUpdate))
 
-        console.log(FeedToUpdate)
-        setFeeds(feeds => [...feeds, feedToAdd])
+        setsavedFeed(feeds => [...feeds, feedToAdd])
     }
     return (
        <button className="ButtonFollow" onClick={() => followFeed(feedId, logo, title)}> Seguir </button> 

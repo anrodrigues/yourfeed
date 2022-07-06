@@ -1,0 +1,15 @@
+@import '../../../theme/theme.scss';
+
+.tabWrapper {
+  position: absolute;
+  right: -25px;
+  top: 80px;
+  cursor: pointer;
+}
+
+@media(min-width: $b-medium) {
+  .tabWrapper {
+    display: none;
+  }
+}
+

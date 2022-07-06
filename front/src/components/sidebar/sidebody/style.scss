@@ -1,16 +1,19 @@
 @import '../../../theme/theme.scss';
 
  .sidebarBody {
-    .sideTitle {
-       margin: $s-small 0 $s-small 0;
-       display: flex;
-       align-items: center;
-       justify-content: space-between;
-       padding: 0px 25px;
+   .sideTitle {
+      margin: $s-small 0 $s-small 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0px 25px;
+      font-size: $f-size-medium;
+      position: relative;
 
-       img {
-          width: 20px;
-          cursor: pointer;
-       }
-    }
+      img {
+         width: 20px;
+         cursor: pointer;
+      }
+
+   }
  }
