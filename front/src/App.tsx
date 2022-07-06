@@ -5,8 +5,7 @@ import SideBar from  './components/sidebar/index'
 import api from 'api'
 import { BrowserRouter, Route, Switch, useHistory} from 'react-router-dom'
 
-import { SavedFeedsContext } from './context/savedFeedsContext'
-import { DEFAULT_VALUE } from './context/savedFeedsContext'
+import { SavedFeedsContext, DEFAULT_VALUE } from './context/savedFeedsContext'
 
 import  './theme/global.scss'
 import 'app.scss'
